@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tongue Trainer</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+    }
+
+    canvas {
+      display: block;
+      margin: auto;
+    }
+
+    #panel {
+      margin-top: 10px;
+    }
+
+    #bigTimer {
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #00ffcc;
+    }
+
+    #progressBar {
+      width: 300px;
+      height: 20px;
+      background: #333;
+      margin: 10px auto;
+    }
+
+    #progressFill {
+      height: 100%;
+      width: 0%;
+      background: #00ff88;
+    }
+  </style>
+</head>
+
+<body>
+
+<video id="video" autoplay playsinline style="display:none;"></video>
+<canvas id="canvas"></canvas>
+
+<div id="panel">
+  <h3 id="task">Loading...</h3>
+  <p id="msg"></p>
+  <p id="timer"></p>
+</div>
+
+<div id="bigTimer"></div>
+
+<div id="progressBar">
+  <div id="progressFill"></div>
+</div>
+
+<script src="app.min.js"></script>
+
+</body>
+</html>
